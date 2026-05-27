@@ -1,88 +1,668 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Abhijith Ganekal - QA Consultant</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abhijith Ganekal | AI-Powered QA Automation Consultant</title>
+
     <style>
-        body {
-            font-family: Arial;
-            margin: 40px;
-            background: #f4f4f4;
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
         }
 
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#020617;
+            color:white;
+            line-height:1.6;
         }
 
-        h1 {
-            color: #222;
+        a{
+            text-decoration:none;
         }
 
-        .section {
-            margin-top: 30px;
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
         }
 
-        .skill {
-            display: inline-block;
-            background: #eee;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 5px;
+        /* NAVBAR */
+
+        nav{
+            width:100%;
+            padding:25px 0;
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:rgba(2,6,23,0.95);
+            backdrop-filter:blur(10px);
+        }
+
+        .nav-content{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#38bdf8;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:30px;
+        }
+
+        .nav-links a{
+            color:white;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#38bdf8;
+        }
+
+        /* HERO */
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:60px;
+            padding:80px 0;
+        }
+
+        .hero-left{
+            flex:1;
+        }
+
+        .hero-right{
+            flex:1;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:70px;
+            line-height:1.1;
+            margin-bottom:20px;
+        }
+
+        .hero h2{
+            color:#38bdf8;
+            font-size:30px;
+            margin-bottom:25px;
+        }
+
+        .hero p{
+            color:#cbd5e1;
+            font-size:20px;
+            margin-bottom:40px;
+            max-width:700px;
+        }
+
+        .buttons{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            padding:15px 30px;
+            border-radius:10px;
+            font-weight:bold;
+            transition:0.3s;
+            display:inline-block;
+        }
+
+        .btn-primary{
+            background:#38bdf8;
+            color:black;
+        }
+
+        .btn-primary:hover{
+            background:#0ea5e9;
+            transform:translateY(-3px);
+        }
+
+        .btn-secondary{
+            border:2px solid #38bdf8;
+            color:#38bdf8;
+        }
+
+        .btn-secondary:hover{
+            background:#38bdf8;
+            color:black;
+            transform:translateY(-3px);
+        }
+
+        .profile-box{
+            background:linear-gradient(145deg,#0f172a,#1e293b);
+            padding:25px;
+            border-radius:25px;
+            box-shadow:0 0 40px rgba(56,189,248,0.2);
+        }
+
+        .profile-box img{
+            width:350px;
+            border-radius:20px;
+            border:4px solid #38bdf8;
+        }
+
+        /* STATS */
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+            margin-top:30px;
+            margin-bottom:80px;
+        }
+
+        .stat-card{
+            background:#0f172a;
+            padding:35px;
+            border-radius:20px;
+            text-align:center;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.05);
+        }
+
+        .stat-card:hover{
+            transform:translateY(-10px);
+            border-color:#38bdf8;
+        }
+
+        .stat-card h3{
+            font-size:45px;
+            color:#38bdf8;
+            margin-bottom:10px;
+        }
+
+        .stat-card p{
+            color:#cbd5e1;
+        }
+
+        /* SECTIONS */
+
+        section{
+            padding:100px 0;
+        }
+
+        .section-title{
+            text-align:center;
+            font-size:45px;
+            margin-bottom:60px;
+        }
+
+        /* SKILLS */
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+            justify-content:center;
+        }
+
+        .skill{
+            background:#0f172a;
+            padding:15px 25px;
+            border-radius:50px;
+            font-weight:bold;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.05);
+        }
+
+        .skill:hover{
+            background:#38bdf8;
+            color:black;
+            transform:translateY(-5px);
+        }
+
+        /* PROJECTS */
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px;
+        }
+
+        .project-card{
+            background:#0f172a;
+            padding:35px;
+            border-radius:20px;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.05);
+        }
+
+        .project-card:hover{
+            transform:translateY(-10px);
+            border-color:#38bdf8;
+        }
+
+        .project-card h3{
+            color:#38bdf8;
+            margin-bottom:20px;
+            font-size:24px;
+        }
+
+        .project-card p{
+            color:#cbd5e1;
+        }
+
+        /* SERVICES */
+
+        .services{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .service-card{
+            background:#0f172a;
+            padding:35px;
+            border-radius:20px;
+            text-align:center;
+            transition:0.3s;
+            border:1px solid rgba(255,255,255,0.05);
+        }
+
+        .service-card:hover{
+            transform:translateY(-10px);
+            border-color:#38bdf8;
+        }
+
+        .service-card h3{
+            color:#38bdf8;
+            margin-bottom:20px;
+        }
+
+        .service-card p{
+            color:#cbd5e1;
+        }
+
+        /* CONTACT */
+
+        .contact{
+            text-align:center;
+        }
+
+        .contact p{
+            color:#cbd5e1;
+            font-size:18px;
+        }
+
+        .contact-buttons{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:40px;
+        }
+
+        .contact-details{
+            margin-top:40px;
+            font-size:18px;
+            color:#cbd5e1;
+        }
+
+        .contact-details p{
+            margin-bottom:12px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            border-top:1px solid rgba(255,255,255,0.08);
+            padding:40px;
+            text-align:center;
+            color:#94a3b8;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:950px){
+
+            .hero{
+                flex-direction:column-reverse;
+                text-align:center;
+            }
+
+            .buttons{
+                justify-content:center;
+            }
+
+            .hero h1{
+                font-size:50px;
+            }
+
+            .hero h2{
+                font-size:24px;
+            }
+
+            .profile-box img{
+                width:280px;
+            }
+
+            .nav-links{
+                display:none;
+            }
+
         }
 
     </style>
+
 </head>
+
 <body>
 
-<div class="container">
+    <!-- NAVBAR -->
 
-    <h1>Abhijith Ganekal</h1>
+    <nav>
 
-    <h2>AI-Powered QA Automation Consultant</h2>
+        <div class="container nav-content">
 
-    <p>
-        12+ years of experience in QA Automation,
-        Manual Testing, API Testing, Selenium,
-        Playwright, CI/CD, and AI-powered QA solutions.
-    </p>
+            <div class="logo">
+                Abhijith QA
+            </div>
 
-    <div class="section">
-        <h2>Skills</h2>
+            <div class="nav-links">
 
-        <span class="skill">Selenium</span>
-        <span class="skill">Playwright</span>
-        <span class="skill">API Testing</span>
-        <span class="skill">Java</span>
-        <span class="skill">Python</span>
-        <span class="skill">Postman</span>
-        <span class="skill">Jenkins</span>
-        <span class="skill">Azure DevOps</span>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <div class="container">
+
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <h1>Abhijith Ganekal</h1>
+
+                <h2>AI-Powered QA Automation Consultant</h2>
+
+                <p>
+                    12+ years of experience in QA Automation, Selenium,
+                    Playwright, API Testing, CI/CD, exploratory testing,
+                    product stability testing, and AI-powered QA solutions.
+                    Helping startups and enterprises build scalable,
+                    stable, and bug-free products.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="profile-box">
+
+                    <img src="https://raw.githubusercontent.com/Abhijith1190/abhijith1190.github.io/refs/heads/main/1767773645634.jfif" alt="Abhijith Ganekal">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>12+</h3>
+                <p>Years Experience</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>50+</h3>
+                <p>Projects Tested</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>1000+</h3>
+                <p>Bugs Identified</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>20+</h3>
+                <p>Automation Frameworks</p>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="section">
-        <h2>Services</h2>
+    <!-- SKILLS -->
 
-        <ul>
-            <li>QA Automation</li>
-            <li>Manual Testing</li>
-            <li>API Testing</li>
-            <li>Product Stability Testing</li>
-            <li>Startup QA Consulting</li>
-        </ul>
-    </div>
+    <section id="skills">
 
-    <div class="section">
-        <h2>Contact</h2>
+        <div class="container">
 
-        <p>Email: your-email@gmail.com</p>
+            <h2 class="section-title">Skills</h2>
 
-        <p>LinkedIn:
-        linkedin.com/in/yourprofile
-        </p>
-    </div>
+            <div class="skills">
 
-</div>
+                <div class="skill">Selenium</div>
+                <div class="skill">Playwright</div>
+                <div class="skill">API Testing</div>
+                <div class="skill">Java</div>
+                <div class="skill">Python</div>
+                <div class="skill">Postman</div>
+                <div class="skill">Jenkins</div>
+                <div class="skill">Azure DevOps</div>
+                <div class="skill">JMeter</div>
+                <div class="skill">AI QA</div>
+                <div class="skill">Manual Testing</div>
+                <div class="skill">CI/CD</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+
+                    <h3>Playwright Automation Framework</h3>
+
+                    <p>
+                        Advanced cross-browser automation framework
+                        with reporting, screenshots, parallel execution,
+                        CI/CD integration, and API validations.
+                    </p>
+
+                </div>
+
+                <div class="project-card">
+
+                    <h3>API Testing Suite</h3>
+
+                    <p>
+                        REST API automation framework using Postman,
+                        Rest Assured, and enterprise-level automated
+                        validation strategies.
+                    </p>
+
+                </div>
+
+                <div class="project-card">
+
+                    <h3>AI-Powered QA Tools</h3>
+
+                    <p>
+                        AI-assisted test case generation, automation
+                        helpers, product stability testing utilities,
+                        and smart QA workflows.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <h2 class="section-title">Services</h2>
+
+            <div class="services">
+
+                <div class="service-card">
+
+                    <h3>QA Automation</h3>
+
+                    <p>
+                        Selenium, Playwright, CI/CD automation
+                        framework development and maintenance.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <h3>Manual Testing</h3>
+
+                    <p>
+                        Exploratory testing, regression testing,
+                        edge-case validation, and product stability testing.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <h3>API Testing</h3>
+
+                    <p>
+                        REST API automation, validation,
+                        security checks, and performance testing.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <h3>Startup QA Consulting</h3>
+
+                    <p>
+                        Helping startups improve usability,
+                        product stability, release quality,
+                        and customer experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container contact">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <p>
+                Interested in QA consulting, automation,
+                or product stability testing?
+            </p>
+
+            <div class="contact-buttons">
+
+                <a href="https://github.com/Abhijith1190"
+                   target="_blank"
+                   class="btn btn-primary">
+
+                    GitHub
+
+                </a>
+
+                <a href="mailto:abhijith.consulting.qa@zohomail.in"
+                   class="btn btn-secondary">
+
+                    Email Me
+
+                </a>
+
+            </div>
+
+            <div class="contact-details">
+
+                <p>
+                    📧 abhijith.consulting.qa@zohomail.in
+                </p>
+
+                <p>
+                    📞 +91-9844110490
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Abhijith Ganekal | AI-Powered QA Automation Consultant
+
+        <br><br>
+
+        📧 abhijith.consulting.qa@zohomail.in
+
+    </footer>
 
 </body>
 </html>
